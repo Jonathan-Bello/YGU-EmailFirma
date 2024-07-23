@@ -98,7 +98,7 @@ const FormEmail = () => {
       </form>
 
       <div className="container max-w-3xl mb-8">
-        <main id="signature">
+        <main id="signature" style={{ maxWidth: "48rem" }}>
           <table style={{ borderCollapse: "collapse", height: "480px" }}>
             <tbody>
               <tr>
@@ -107,11 +107,11 @@ const FormEmail = () => {
                     borderRight: "3px solid #ccc",
                     verticalAlign: "top",
                     padding: "2rem",
-                    width: "280px",
+                    width: "200px",
                   }}
                 >
                   <img
-                    style={{ width: "250px" }}
+                    style={{ width: "180px" }}
                     src={imgLogo.src}
                     alt="marca"
                   />
