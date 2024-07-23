@@ -82,7 +82,7 @@ const FormEmail = () => {
 
       <div className="container max-w-3xl">
         <main>
-          <table style={{ width: "100%", borderCollapse: "collapse" }}>
+          <table style={{ borderCollapse: "collapse", height: "480px" }}>
             <tbody>
               <tr>
                 <td
@@ -93,7 +93,11 @@ const FormEmail = () => {
                     width: "280px",
                   }}
                 >
-                  <img src={imgLogo.src} alt="marca" />
+                  <img
+                    style={{ width: "250px" }}
+                    src={imgLogo.src}
+                    alt="marca"
+                  />
                 </td>
                 <td
                   style={{
