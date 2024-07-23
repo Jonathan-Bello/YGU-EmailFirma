@@ -81,88 +81,98 @@ const FormEmail = () => {
       </form>
 
       <div className="container max-w-3xl">
-        <main
-          style={{
-            display: "grid",
-            gridTemplateColumns: "1fr 1fr 1fr",
-            rowGap: "1rem",
-          }}
-        >
-          <div style={{ borderRight: "3px solid #ccc" }}>
-            <img style={{ padding: "2rem" }} src={imgLogo.src} alt="marca" />
-          </div>
-
-          <div
-            style={{
-              paddingLeft: "0.5rem",
-              gridColumn: "span 2",
-            }}
-          >
-            <h1 style={{ fontSize: "1.5rem", color: "#222525" }}>
-              <strong>{name}</strong>
-            </h1>
-            <p style={{ marginBottom: "0.5rem", color: "##4c5251" }}>{title}</p>
-
-            <p style={{ marginBottom: "1rem", color: "##4c5251" }}>{address}</p>
-
-            <p>
-              O:{" "}
-              <a
-                style={{ color: "#1c77b0", textDecoration: "underline" }}
-                href={`tel:${phone}`}
-              >
-                {phone}
-              </a>
-            </p>
-            <p>
-              M:{" "}
-              <a
-                style={{ color: "#1c77b0", textDecoration: "underline" }}
-                href={`tel:${phone}`}
-              >
-                {phone2}
-              </a>
-            </p>
-            <p>
-              <a
-                style={{ color: "#1c77b0", textDecoration: "underline" }}
-                href={`mailto:${email}`}
-              >
-                {email}
-              </a>
-            </p>
-            <p>
-              <a
-                style={{ color: "#1c77b0", textDecoration: "underline" }}
-                href={webSite}
-              >
-                {webSite}
-              </a>
-            </p>
-          </div>
-
-          <footer
-            style={{
-              gridColumn: "span 3",
-            }}
-          >
-            <img style={{ width: "100%" }} src={imgBanner.src} alt="banner" />
-            <p style={{fontSize: "0.7rem"}}>
-              AVISO DE PRIVACIDAD: Este correo electrónico es estrictamente
-              confidencial y está dirigido exclusivamente a su destinatario.
-              Puede contener información la cual está protegida legal y
-              profesionalmente, o con otros privilegios. Si usted no es el
-              destinatario no deberá revelar su contenido, copiar o tomar
-              cualquier acción de esta transmisión electrónica. Si usted ha
-              recibido este correo por error, por favor notifíquenos
-              inmediatamente y elimine este correo electrónico con toda la
-              información recibida tan pronto como sea posible. Gracias
-            </p>
-          </footer>
+        <main>
+          <table style={{ width: "100%", borderCollapse: "collapse" }}>
+            <tbody>
+              <tr>
+                <td
+                  style={{
+                    borderRight: "3px solid #ccc",
+                    verticalAlign: "top",
+                    padding: "2rem",
+                    width: "280px",
+                  }}
+                >
+                  <img src={imgLogo.src} alt="marca" />
+                </td>
+                <td
+                  style={{
+                    paddingLeft: "0.5rem",
+                    verticalAlign: "top",
+                    padding: "1rem",
+                  }}
+                  colSpan="2"
+                >
+                  <h1 style={{ fontSize: "1.5rem", color: "#222525" }}>
+                    <strong>{name}</strong>
+                  </h1>
+                  <p style={{ marginBottom: "0.5rem", color: "#4c5251" }}>
+                    {title}
+                  </p>
+                  <p style={{ marginBottom: "1rem", color: "#4c5251" }}>
+                    {address}
+                  </p>
+                  <p>
+                    O:{" "}
+                    <a
+                      style={{ color: "#1c77b0", textDecoration: "underline" }}
+                      href={`tel:${phone}`}
+                    >
+                      {phone}
+                    </a>
+                  </p>
+                  <p>
+                    M:{" "}
+                    <a
+                      style={{ color: "#1c77b0", textDecoration: "underline" }}
+                      href={`tel:${phone2}`}
+                    >
+                      {phone2}
+                    </a>
+                  </p>
+                  <p>
+                    <a
+                      style={{ color: "#1c77b0", textDecoration: "underline" }}
+                      href={`mailto:${email}`}
+                    >
+                      {email}
+                    </a>
+                  </p>
+                  <p>
+                    <a
+                      style={{ color: "#1c77b0", textDecoration: "underline" }}
+                      href={webSite}
+                    >
+                      {webSite}
+                    </a>
+                  </p>
+                </td>
+              </tr>
+              <tr>
+                <td colSpan="3" style={{ paddingTop: "1rem" }}>
+                  <img
+                    style={{ width: "100%" }}
+                    src={imgBanner.src}
+                    alt="banner"
+                  />
+                  <p style={{ fontSize: "0.7rem", marginTop: "1rem" }}>
+                    AVISO DE PRIVACIDAD: Este correo electrónico es
+                    estrictamente confidencial y está dirigido exclusivamente a
+                    su destinatario. Puede contener información la cual está
+                    protegida legal y profesionalmente, o con otros privilegios.
+                    Si usted no es el destinatario no deberá revelar su
+                    contenido, copiar o tomar cualquier acción de esta
+                    transmisión electrónica. Si usted ha recibido este correo
+                    por error, por favor notifíquenos inmediatamente y elimine
+                    este correo electrónico con toda la información recibida tan
+                    pronto como sea posible. Gracias
+                  </p>
+                </td>
+              </tr>
+            </tbody>
+          </table>
         </main>
       </div>
-
-      
     </div>
   );
 };
