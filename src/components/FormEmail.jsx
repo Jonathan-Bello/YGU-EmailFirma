@@ -12,6 +12,17 @@ const FormEmail = () => {
   const [phone2, setPhone2] = useState("");
   const [webSite, setWebSite] = useState("");
 
+  const handleCopy = () => {
+    const signatureHtml = document.getElementById("signature").innerHTML;
+    const tempTextArea = document.createElement("textarea");
+    tempTextArea.value = signatureHtml;
+    document.body.appendChild(tempTextArea);
+    tempTextArea.select();
+    document.execCommand("copy");
+    document.body.removeChild(tempTextArea);
+    alert("Firma copiada al portapapeles");
+  };
+
   return (
     <div>
       <form className="flex flex-col gap-8 mb-12">
@@ -177,6 +188,14 @@ const FormEmail = () => {
           </table>
         </main>
       </div>
+
+      <button
+        onClick={handleCopy}
+        type="button"
+        class="text-white bg-red-700 hover:bg-red-800 focus:outline-none focus:ring-4 focus:ring-red-300 font-medium rounded-full text-sm px-5 py-2.5 text-center me-2 mb-2 dark:bg-red-600 dark:hover:bg-red-700 dark:focus:ring-red-900"
+      >
+        Copiar Firma
+      </button>
     </div>
   );
 };
