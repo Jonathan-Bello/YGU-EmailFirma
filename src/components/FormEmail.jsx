@@ -98,8 +98,8 @@ const FormEmail = () => {
       </form>
 
       <div className="container max-w-3xl mb-8">
-        <main id="signature" style={{ maxWidth: "48rem" }}>
-          <table style={{ borderCollapse: "collapse", height: "480px" }}>
+        <main id="signature">
+          <table style={{ borderCollapse: "collapse", height: "480px",  maxWidth: "48rem" }}>
             <tbody>
               <tr>
                 <td
