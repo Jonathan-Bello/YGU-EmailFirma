@@ -1,16 +1,13 @@
 import { useState } from "react";
-import FirmaTemplate from "./FirmaTemplate";
-import imgLogo from "../assets/marca.png";
-import imgBanner from "../assets/banner.jpg";
 
 const FormEmail = () => {
   const [name, setName] = useState("");
   const [title, setTitle] = useState("");
   const [address, setAddress] = useState("");
   const [email, setEmail] = useState("");
-  const [phone, setPhone] = useState("");
-  const [phone2, setPhone2] = useState("");
-  const [webSite, setWebSite] = useState("");
+  const [phone, setPhone] = useState("+52 (55) 5510.0040 ext. 114");
+  const [phone2, setPhone2] = useState("+52 (55) 4355.4661");
+  const [webSite, setWebSite] = useState("www.cimepowersystems.com.mx");
 
   const handleCopy = async () => {
     const htmlContent = document.getElementById("signature").innerHTML;
@@ -90,7 +87,7 @@ const FormEmail = () => {
           />
         </label>
         <label>
-          Teléfono:
+          Teléfono O:
           <input
             className="w-full rounded-md border-0 py-1.5 pl-7 pr-20 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
             type="tel"
@@ -99,7 +96,7 @@ const FormEmail = () => {
           />
         </label>
         <label>
-          Teléfono:
+          Teléfono M:
           <input
             className="w-full rounded-md border-0 py-1.5 pl-7 pr-20 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
             type="tel"
@@ -139,7 +136,9 @@ const FormEmail = () => {
                 >
                   <img
                     style={{ width: "180px" }}
-                    src={imgLogo.src}
+                    src={
+                      "https://res.cloudinary.com/dpxxweszs/image/upload/v1721769760/marca_sghtnr.png"
+                    }
                     alt="marca"
                   />
                 </td>
@@ -189,7 +188,7 @@ const FormEmail = () => {
                   <p>
                     <a
                       style={{ color: "#1c77b0", textDecoration: "underline" }}
-                      href={webSite}
+                      href={"https://" + webSite}
                     >
                       {webSite}
                     </a>
@@ -200,7 +199,9 @@ const FormEmail = () => {
                 <td colSpan="3" style={{ paddingTop: "1rem" }}>
                   <img
                     style={{ width: "100%" }}
-                    src={imgBanner.src}
+                    src={
+                      "https://res.cloudinary.com/dpxxweszs/image/upload/v1721769760/banner_leirxa.jpg"
+                    }
                     alt="banner"
                   />
                   <p style={{ fontSize: "0.7rem", marginTop: "1rem" }}>
