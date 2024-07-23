@@ -29,6 +29,27 @@ const FormEmail = () => {
     }
   };
 
+  const handleDownload = () => {
+    const htmlContent = document.getElementById("signature").innerHTML;
+
+    // Crea un Blob con el contenido HTML
+    const blob = new Blob([htmlContent], { type: "text/html" });
+
+    // Crea una URL para el Blob
+    const url = URL.createObjectURL(blob);
+
+    // Crea un enlace para descargar el archivo
+    const a = document.createElement("a");
+    a.href = url;
+    a.download = "contenido.html"; // Nombre del archivo a descargar
+
+    // Simula un clic en el enlace para iniciar la descarga
+    a.click();
+
+    // Revoca la URL del Blob para liberar memoria
+    URL.revokeObjectURL(url);
+  };
+
   return (
     <div>
       <form className="flex flex-col gap-8 mb-12">
@@ -99,7 +120,13 @@ const FormEmail = () => {
 
       <div className="container max-w-3xl mb-8">
         <main id="signature">
-          <table style={{ borderCollapse: "collapse", height: "480px",  maxWidth: "48rem" }}>
+          <table
+            style={{
+              borderCollapse: "collapse",
+              height: "480px",
+              maxWidth: "48rem",
+            }}
+          >
             <tbody>
               <tr>
                 <td
@@ -201,6 +228,14 @@ const FormEmail = () => {
         class="text-white bg-red-700 hover:bg-red-800 focus:outline-none focus:ring-4 focus:ring-red-300 font-medium rounded-full text-sm px-5 py-2.5 text-center me-2 mb-2 dark:bg-red-600 dark:hover:bg-red-700 dark:focus:ring-red-900"
       >
         Copiar Firma
+      </button>
+
+      <button
+        onClick={handleDownload}
+        type="button"
+        class="text-white bg-red-700 hover:bg-red-800 focus:outline-none focus:ring-4 focus:ring-red-300 font-medium rounded-full text-sm px-5 py-2.5 text-center me-2 mb-2 dark:bg-red-600 dark:hover:bg-red-700 dark:focus:ring-red-900"
+      >
+        Descargar Firma
       </button>
     </div>
   );
