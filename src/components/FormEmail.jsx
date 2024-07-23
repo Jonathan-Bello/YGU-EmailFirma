@@ -12,15 +12,21 @@ const FormEmail = () => {
   const [phone2, setPhone2] = useState("");
   const [webSite, setWebSite] = useState("");
 
-  const handleCopy = () => {
-    const signatureHtml = document.getElementById("signature").innerHTML;
-    const tempTextArea = document.createElement("textarea");
-    tempTextArea.value = signatureHtml;
-    document.body.appendChild(tempTextArea);
-    tempTextArea.select();
-    document.execCommand("copy");
-    document.body.removeChild(tempTextArea);
-    alert("Firma copiada al portapapeles");
+  const handleCopy = async () => {
+    const htmlContent = document.getElementById("signature").innerHTML;
+
+    try {
+      // Usa el API de Clipboard para copiar HTML
+      await navigator.clipboard.write([
+        new ClipboardItem({
+          "text/html": new Blob([htmlContent], { type: "text/html" }),
+        }),
+      ]);
+
+      alert("¡Contenido copiado al portapapeles!");
+    } catch (err) {
+      console.error("Error al copiar el contenido: ", err);
+    }
   };
 
   return (
@@ -91,8 +97,8 @@ const FormEmail = () => {
         </label>
       </form>
 
-      <div className="container max-w-3xl">
-        <main>
+      <div className="container max-w-3xl mb-8">
+        <main id="signature">
           <table style={{ borderCollapse: "collapse", height: "480px" }}>
             <tbody>
               <tr>
