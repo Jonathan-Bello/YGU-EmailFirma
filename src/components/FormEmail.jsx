@@ -3,7 +3,9 @@ import { useState } from "react";
 const FormEmail = () => {
   const [name, setName] = useState("");
   const [title, setTitle] = useState("");
-  const [address, setAddress] = useState("");
+  const [address, setAddress] = useState(
+    "Lago Ladoga 275, Col. Modelo Pensil, Del. Miguel Hidalgo, C.P. 11450, CDMX, México."
+  );
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("+52 (55) 5510.0040 ext. 114");
   const [phone2, setPhone2] = useState("+52 (55) 4355.4661");
