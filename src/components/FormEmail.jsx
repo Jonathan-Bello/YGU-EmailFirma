@@ -161,7 +161,7 @@ const FormEmail = () => {
                     }}
                   >
                     <img
-                      style={{ width: "180px" }}
+                      style={{ width: "136px", height: "136px" }}
                       src={
                         "https://res.cloudinary.com/dpxxweszs/image/upload/v1721769760/marca_sghtnr.png"
                       }
@@ -236,7 +236,7 @@ const FormEmail = () => {
                 <tr>
                   <td colSpan="3" style={{ paddingTop: "1rem" }}>
                     <img
-                      style={{ width: "100%" }}
+                      style={{ width: "768px" }}
                       src={
                         "https://res.cloudinary.com/dpxxweszs/image/upload/v1721769760/banner_leirxa.jpg"
                       }
