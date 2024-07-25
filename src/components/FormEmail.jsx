@@ -156,7 +156,7 @@ const FormEmail = () => {
                     style={{
                       borderRight: "3px solid #ccc",
                       verticalAlign: "top",
-                      padding: "2rem",
+                      padding: "32px",
                       width: "200px",
                     }}
                   >
@@ -170,19 +170,19 @@ const FormEmail = () => {
                   </td>
                   <td
                     style={{
-                      paddingLeft: "0.5rem",
+                      paddingLeft: "8px",
                       verticalAlign: "top",
-                      padding: "1rem",
+                      padding: "16px",
                     }}
                     colSpan="2"
                   >
-                    <h1 style={{ fontSize: "1.5rem", color: "#222525" }}>
+                    <h1 style={{ fontSize: "24px", color: "#222525" }}>
                       <strong>{name}</strong>
                     </h1>
-                    <p style={{ marginBottom: "0.5rem", color: "#4c5251" }}>
+                    <p style={{ marginBottom: "8px", color: "#4c5251" }}>
                       {title}
                     </p>
-                    <p style={{ marginBottom: "1rem", color: "#4c5251" }}>
+                    <p style={{ marginBottom: "16px", color: "#4c5251" }}>
                       {address}
                     </p>
                     <p>
@@ -242,7 +242,7 @@ const FormEmail = () => {
                       }
                       alt="banner"
                     />
-                    <p style={{ fontSize: "0.7rem", marginTop: "1rem" }}>
+                    <p style={{ fontSize: "10px", marginTop: "16px" }}>
                       AVISO DE PRIVACIDAD: Este correo electrónico es
                       estrictamente confidencial y está dirigido exclusivamente
                       a su destinatario. Puede contener información la cual está
