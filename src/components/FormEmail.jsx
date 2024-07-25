@@ -147,7 +147,7 @@ const FormEmail = () => {
               style={{
                 borderCollapse: "collapse",
                 height: "480px",
-                maxWidth: "48rem",
+                maxWidth: "768px",
               }}
             >
               <tbody>
