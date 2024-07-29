@@ -153,14 +153,14 @@ const FormEmail = () => {
               <tbody>
                 <tr>
                   <td
+                    align="center"
+                    valign="center"
                     style={{
-                      borderRight: "3px solid #ccc",
-                      verticalAlign: "top",
                       width: "140px",
                     }}
                   >
                     <img
-                      style={{ width: "120px" }}
+                      style={{ width: "120px", margin: "auto" }}
                       src={
                         "https://res.cloudinary.com/dpxxweszs/image/upload/v1722278794/marca_esvuva.png"
                       }
@@ -169,6 +169,7 @@ const FormEmail = () => {
                   </td>
                   <td
                     style={{
+                      borderLeft: "3px solid #ccc",
                       paddingLeft: "8px",
                       verticalAlign: "top",
                       padding: "16px",
@@ -176,16 +177,37 @@ const FormEmail = () => {
                     }}
                     colSpan="2"
                   >
-                    <h1 style={{ fontSize: "24px", color: "#222525" }}>
+                    <h1
+                      style={{
+                        margin: "0px",
+                        marginBottom: "0px",
+                        fontSize: "14px",
+                        color: "#222525",
+                      }}
+                    >
                       <strong>{name}</strong>
                     </h1>
-                    <p style={{ marginBottom: "8px", color: "#4c5251" }}>
+                    <p
+                      style={{
+                        fontSize: "14px",
+                        margin: "0px",
+                        marginBottom: "4px",
+                        color: "#4c5251",
+                      }}
+                    >
                       {title}
                     </p>
-                    <p style={{ marginBottom: "16px", color: "#4c5251" }}>
+                    <p
+                      style={{
+                        fontSize: "14px",
+                        margin: "0px",
+                        marginBottom: "8px",
+                        color: "#4c5251",
+                      }}
+                    >
                       {address}
                     </p>
-                    <p>
+                    <p style={{ margin: "0px", fontSize: "14px" }}>
                       O:{" "}
                       <a
                         style={{
@@ -197,7 +219,7 @@ const FormEmail = () => {
                         {phone}
                       </a>
                     </p>
-                    <p>
+                    <p style={{ margin: "0px", fontSize: "14px" }}>
                       M:{" "}
                       <a
                         style={{
@@ -209,7 +231,7 @@ const FormEmail = () => {
                         {phone2}
                       </a>
                     </p>
-                    <p>
+                    <p style={{ margin: "0px", fontSize: "14px" }}>
                       <a
                         style={{
                           color: "#1c77b0",
@@ -220,7 +242,7 @@ const FormEmail = () => {
                         {email}
                       </a>
                     </p>
-                    <p>
+                    <p style={{ margin: "0px", fontSize: "14px" }}>
                       <a
                         style={{
                           color: "#1c77b0",
