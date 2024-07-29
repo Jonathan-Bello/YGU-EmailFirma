@@ -146,8 +146,8 @@ const FormEmail = () => {
             <table
               style={{
                 borderCollapse: "collapse",
-                height: "480px",
-                maxWidth: "768px",
+                width: "100%",
+                maxWidth: "640px",
               }}
             >
               <tbody>
@@ -156,14 +156,13 @@ const FormEmail = () => {
                     style={{
                       borderRight: "3px solid #ccc",
                       verticalAlign: "top",
-                      padding: "32px",
-                      width: "200px",
+                      width: "140px",
                     }}
                   >
                     <img
-                      style={{ width: "136px", height: "136px" }}
+                      style={{ width: "120px" }}
                       src={
-                        "https://res.cloudinary.com/dpxxweszs/image/upload/v1721769760/marca_sghtnr.png"
+                        "https://res.cloudinary.com/dpxxweszs/image/upload/v1722278794/marca_esvuva.png"
                       }
                       alt="marca"
                     />
@@ -173,6 +172,7 @@ const FormEmail = () => {
                       paddingLeft: "8px",
                       verticalAlign: "top",
                       padding: "16px",
+                      width: "500px",
                     }}
                     colSpan="2"
                   >
@@ -236,9 +236,9 @@ const FormEmail = () => {
                 <tr>
                   <td colSpan="3" style={{ paddingTop: "1rem" }}>
                     <img
-                      style={{ width: "768px" }}
+                      style={{ width: "640px" }}
                       src={
-                        "https://res.cloudinary.com/dpxxweszs/image/upload/v1721769760/banner_leirxa.jpg"
+                        "https://res.cloudinary.com/dpxxweszs/image/upload/t_640/v1722279191/banner_1_otdxk2.jpg"
                       }
                       alt="banner"
                     />
